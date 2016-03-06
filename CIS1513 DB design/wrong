@@ -1,0 +1,20 @@
+Some wrong answers on a CIS1513 quiz
+
+When transforming a conceptual model to a table, the table name is the plural of the entity name. Example: STUDENT becomes STUDENTS.-False
+
+A ___ is a column or combination of columns in one table that refers to a primary key in the same table or another table.-unique key(UK)
+
+Rules for Relationships: A relationship creates one or more foreign-key columns in the ___ table -in both one sided and the many sided
+
+In the diagram what is the Primary key for the ACCOUNT entity??
+
+ACCOUNT
+#number
+*balance
+*date opened >-|— - - - -BANK
+			 #number
+			 *name
+-Account_number
+
+no??
+

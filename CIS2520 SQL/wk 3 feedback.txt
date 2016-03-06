@@ -1,0 +1,7 @@
+Feedback
+9/18/14 11:14 AM
+Great job!
+
+Q4 Annual Salary should be salary *12
+
+q14- ORDER BY TO_CHAR(hire_date-1, 'D');

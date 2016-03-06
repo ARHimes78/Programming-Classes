@@ -1,0 +1,5 @@
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HousingBase\bin\Debug\HousingBase.dll
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HousingBase\bin\Debug\HousingBase.pdb
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HousingBase\obj\Debug\HousingBase.csprojResolveAssemblyReference.cache
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HousingBase\obj\Debug\HousingBase.dll
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HousingBase\obj\Debug\HousingBase.pdb

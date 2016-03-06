@@ -1,0 +1,14 @@
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\bin\Debug\HimesE6.exe.config
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\bin\Debug\HimesE6.exe
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\bin\Debug\HimesE6.pdb
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.csprojResolveAssemblyReference.cache
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.PresentationGUI.resources
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.Properties.Resources.resources
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.csproj.GenerateResource.Cache
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.exe
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesE6\HimesE6\obj\Debug\HimesE6.pdb
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HimesE6\bin\Debug\HousingBase.dll
+\\filer2main\student1$\ahimes1\Visual Studio 2012\Projects\HimesE6\HimesE6\bin\Debug\HousingBase.pdb
+C:\Users\ahimes1\Desktop\CIS1280_Spring2015_ahimes1\HimesE6\HimesE6\bin\Debug\HimesE6.exe.config
+C:\Users\ahimes1\Desktop\CIS1280_Spring2015_ahimes1\HimesE6\HimesE6\obj\Debug\HimesE6.exe
+C:\Users\ahimes1\Desktop\CIS1280_Spring2015_ahimes1\HimesE6\HimesE6\obj\Debug\HimesE6.pdb

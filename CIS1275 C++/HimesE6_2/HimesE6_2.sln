@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HimesE6_2", "HimesE6_2\HimesE6_2.vcxproj", "{949D4FF2-CB88-49C1-BA56-1AED74BB7E11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{949D4FF2-CB88-49C1-BA56-1AED74BB7E11}.Debug|Win32.ActiveCfg = Debug|Win32
+		{949D4FF2-CB88-49C1-BA56-1AED74BB7E11}.Debug|Win32.Build.0 = Debug|Win32
+		{949D4FF2-CB88-49C1-BA56-1AED74BB7E11}.Release|Win32.ActiveCfg = Release|Win32
+		{949D4FF2-CB88-49C1-BA56-1AED74BB7E11}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

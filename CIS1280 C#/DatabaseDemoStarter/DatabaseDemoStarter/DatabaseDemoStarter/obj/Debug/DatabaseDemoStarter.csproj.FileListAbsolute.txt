@@ -1,0 +1,7 @@
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\bin\DatabaseDemoStarter.dll
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\bin\DatabaseDemoStarter.pdb
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\bin\EntityFramework.dll
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\bin\EntityFramework.xml
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\obj\Debug\DatabaseDemoStarter.csprojResolveAssemblyReference.cache
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\obj\Debug\DatabaseDemoStarter.dll
+\\filer2main\student1$\ahimes1\Semester 3\C#\DatabaseDemoStarter\DatabaseDemoStarter\DatabaseDemoStarter\obj\Debug\DatabaseDemoStarter.pdb

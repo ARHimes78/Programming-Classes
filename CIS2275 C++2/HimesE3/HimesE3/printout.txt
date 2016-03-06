@@ -1,0 +1,50 @@
+//from Form1.h of Exercise 3
+
+#pragma endregion
+private: System::Void btAdd_Click(System::Object^  sender, System::EventArgs^  e) {
+			 double op1 = Convert::ToDouble(txtOperand1->Text);
+			 double op2 = Convert::ToDouble(txtOperand2->Text);
+
+			 calc.SetOperation('+', op1, op2);
+			 txtResults->Text = calc.GetAnswer().ToString();
+
+			 lblOperation->Text = "+";
+			 }
+private: System::Void btSubtr_Click(System::Object^  sender, System::EventArgs^  e) {
+			 double op1 = Convert::ToDouble(txtOperand1->Text);
+			 double op2 = Convert::ToDouble(txtOperand2->Text);
+
+			 calc.SetOperation('-', op1, op2);
+			 txtResults->Text = calc.GetAnswer().ToString();
+
+			 lblOperation->Text = "-";
+		 }
+private: System::Void btMult_Click(System::Object^  sender, System::EventArgs^  e) {
+			 double op1 = Convert::ToDouble(txtOperand1->Text);
+			 double op2 = Convert::ToDouble(txtOperand2->Text);
+
+			 calc.SetOperation('*', op1, op2);
+			 txtResults->Text = calc.GetAnswer().ToString();
+
+			 lblOperation->Text = "*";
+		 }
+private: System::Void btnDiv_Click(System::Object^  sender, System::EventArgs^  e) {
+		     double op1 = Convert::ToDouble(txtOperand1->Text);
+			 double op2 = Convert::ToDouble(txtOperand2->Text);
+
+			 if (op2 == 0)
+				 txtResults->Text = "Divide by 0!";
+			 else {
+
+				calc.SetOperation('/', op1, op2);
+				txtResults->Text = calc.GetAnswer().ToString();
+			 }
+
+			 lblOperation->Text = "/";
+		 }
+private: System::Void btnClear_Click(System::Object^  sender, System::EventArgs^  e) {
+			 txtOperand1->Clear();
+			 txtOperand2->Clear();
+			 txtResults->Clear();
+			 lblOperation->Text = "";
+		 }

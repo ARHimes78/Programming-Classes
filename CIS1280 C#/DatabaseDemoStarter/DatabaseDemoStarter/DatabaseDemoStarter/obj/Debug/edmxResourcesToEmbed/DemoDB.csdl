@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DemoDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblDepartments" EntityType="DemoDBModel.tblDepartment" />
+    <EntitySet Name="tblEmployees" EntityType="DemoDBModel.tblEmployee" />
+    <AssociationSet Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees" Association="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+      <End Role="tblEmployees" EntitySet="tblEmployees" />
+      <End Role="tblDepartments" EntitySet="tblDepartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployeesSupervixorID_ToEmployeeID" Association="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID">
+      <End Role="tblEmployees" EntitySet="tblEmployees" />
+      <End Role="tblEmployees1" EntitySet="tblEmployees" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="pkDepartmentID" />
+    </Key>
+    <Property Name="pkDepartmentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fkDepartmentHeadID" Type="Int32" />
+    <NavigationProperty Name="tblEmployee" Relationship="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees" FromRole="tblDepartments" ToRole="tblEmployees" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="pkEmployeeID" />
+    </Key>
+    <Property Name="pkEmployeeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="fkSupervisorID" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="website" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblDepartments" Relationship="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees" FromRole="tblEmployees" ToRole="tblDepartments" />
+    <NavigationProperty Name="tblEmployees1" Relationship="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID" FromRole="tblEmployees" ToRole="tblEmployees1" />
+    <NavigationProperty Name="tblEmployee1" Relationship="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID" FromRole="tblEmployees1" ToRole="tblEmployees" />
+  </EntityType>
+  <Association Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+    <End Role="tblEmployees" Type="DemoDBModel.tblEmployee" Multiplicity="0..1" />
+    <End Role="tblDepartments" Type="DemoDBModel.tblDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployees">
+        <PropertyRef Name="pkEmployeeID" />
+      </Principal>
+      <Dependent Role="tblDepartments">
+        <PropertyRef Name="fkDepartmentHeadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployeesSupervixorID_ToEmployeeID">
+    <End Role="tblEmployees" Type="DemoDBModel.tblEmployee" Multiplicity="0..1" />
+    <End Role="tblEmployees1" Type="DemoDBModel.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmployees">
+        <PropertyRef Name="pkEmployeeID" />
+      </Principal>
+      <Dependent Role="tblEmployees1">
+        <PropertyRef Name="fkSupervisorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

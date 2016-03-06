@@ -1,0 +1,72 @@
+Alan Himes
+CIS2520 Quiz 1
+9/18/14
+
+1: 
+select add_months(sysdate, 36) FUTURE from dual;
+
+2: 
+select lower(substr(first_name, 1, 1) || substr(last_name, 1, 5)) userid 
+from employees;
+
+3: 
+select employee_id, last_name, department_id 
+from employees 
+where substr(last_name, 1, 1) in ('R', 'T') and department_id in (50, 60);
+
+4: 
+select employee_id, last_name, job_id, department_id, 
+nvl(to_char(manager_id), 'YIPEE NO MANAGER !!') manager_id 
+from employees 
+where department_id between 60 and 90 order by department_id, last_name;
+
+5: 
+select employee_id, last_name, hire_date, department_id, 
+round(months_between(sysdate, hire_date), 2) months_worked 
+from employees 
+where department_id in(40,50,60) 
+order by months_worked desc;
+
+6: 
+select last_name, department_id, 
+trunc(months_between(sysdate, hire_date) / 12) years, 
+trunc(months_between(sysdate, hire_date)) months 
+from employees 
+order by department_id, last_name;
+
+7: 
+select employee_id, first_name, last_name, job_id, 
+next_day(add_months(sysdate, 6), 'Tuesday') Next_Meeting 
+from employees 
+where department_id between 20 and 60 
+order by job_id, last_name;
+
+8: 
+select last_name, current_date, 
+to_char(birthdate, 'mm/dd/yyyy') birthdate, 
+trunc((months_between(sysdate, birthdate) / 12), 2) staff_age 
+from f_staffs;
+
+9: 
+select employee_id, last_name, job_id, department_id, salary, 
+decode(job_id,
+'IT_PROG', salary * .3333,
+'FI_ACCOUNT', salary * .1333, 
+100.00) 
+bonus_amount 
+from employees;
+
+10: 
+select last_name, department_id, 
+trunc(months_between(sysdate, hire_date) / 12) years_worked, 
+lpad(salary, 5, '*') salary, 
+length(last_name) last_name_letters 
+from employees;
+
+11: 
+select last_name, to_char(salary, '$99,999.99') salary, hire_date, 
+to_char(hire_date, 'Day') hired_weekday 
+from employees;
+
+12: 
+select to_char(sysdate, 'Month dd, yyyy') from dual;

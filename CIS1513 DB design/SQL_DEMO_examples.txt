@@ -1,0 +1,24 @@
+CIS 1513  Basic SQL commands from class DEMO on TUE 
+
+Select *   -- this means select all columns 
+from jobs; -- which table name, semicolon ends the sql stmt.
+           -- no WHERE stmt means all rows will be returned.
+                      
+select job_id,job_title   -- we pick the columns we want to show separate columns with a comma
+from jobs -- which table 
+--where job_id = 'IT_DBA' -- where stmt checks for criteria (conditions) 
+--NOTES:  job id is Varchar2 which means character data 
+--so it needs single quotes ' ' around the data you are looking for.                                                 
+where min_salary >= 9000; -- min_salary is a NUMBER no single quotes around it         
+                                                   
+                                                   
+Select employee_id as ID,last_name || ', '|| first_name as Employee_Name
+--hire_date, salary, salary*.10 as increase,salary*1.10 as new_salary_diff_calc
+from employees;
+--where salary is not null;-- condition to make sure salary has a value
+--where salary is null;    --condition to make sure salary has a null value
+--where hire_date > '01-MAR-07' ; -- where stmt checking a date it must have single quotes
+         
+-- Example of using the pipes to concatenate it connects columns together
+SELECT department_id || '  '  || department_name as Dept_Name
+FROM departments;

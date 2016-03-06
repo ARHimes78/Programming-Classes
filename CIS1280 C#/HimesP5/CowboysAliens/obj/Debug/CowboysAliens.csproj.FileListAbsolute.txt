@@ -1,0 +1,5 @@
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\CowboysAliens\bin\Debug\CowboysAliens.dll
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\CowboysAliens\bin\Debug\CowboysAliens.pdb
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\CowboysAliens\obj\Debug\CowboysAliens.csprojResolveAssemblyReference.cache
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\CowboysAliens\obj\Debug\CowboysAliens.dll
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\CowboysAliens\obj\Debug\CowboysAliens.pdb

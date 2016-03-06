@@ -1,0 +1,9 @@
+-4  #2A variable names need to be first_name, last_name, 2C incorrect column names check table definitions. 
+
+-2 #3You just showed the acutual raise instead of the new salary it should be: salary + (salary * .05) 
+
+OR
+
+you can use SALARY *1.05 to show new salary
+
+Good job!

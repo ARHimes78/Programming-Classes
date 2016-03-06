@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DemoDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DemoDBModelStoreContainer">
+          <EntitySet Name="tblDepartments" EntityType="DemoDBModel.Store.tblDepartments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblEmployees" EntityType="DemoDBModel.Store.tblEmployees" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees" Association="DemoDBModel.Store.FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+            <End Role="tblEmployees" EntitySet="tblEmployees" />
+            <End Role="tblDepartments" EntitySet="tblDepartments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEmployeesSupervixorID_ToEmployeeID" Association="DemoDBModel.Store.FK_tblEmployeesSupervixorID_ToEmployeeID">
+            <End Role="tblEmployees" EntitySet="tblEmployees" />
+            <End Role="tblEmployees1" EntitySet="tblEmployees" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblDepartments">
+          <Key>
+            <PropertyRef Name="pkDepartmentID" />
+          </Key>
+          <Property Name="pkDepartmentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="fkDepartmentHeadID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblEmployees">
+          <Key>
+            <PropertyRef Name="pkEmployeeID" />
+          </Key>
+          <Property Name="pkEmployeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fkSupervisorID" Type="int" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="website" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+          <End Role="tblEmployees" Type="DemoDBModel.Store.tblEmployees" Multiplicity="0..1" />
+          <End Role="tblDepartments" Type="DemoDBModel.Store.tblDepartments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmployees">
+              <PropertyRef Name="pkEmployeeID" />
+            </Principal>
+            <Dependent Role="tblDepartments">
+              <PropertyRef Name="fkDepartmentHeadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEmployeesSupervixorID_ToEmployeeID">
+          <End Role="tblEmployees" Type="DemoDBModel.Store.tblEmployees" Multiplicity="0..1" />
+          <End Role="tblEmployees1" Type="DemoDBModel.Store.tblEmployees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmployees">
+              <PropertyRef Name="pkEmployeeID" />
+            </Principal>
+            <Dependent Role="tblEmployees1">
+              <PropertyRef Name="fkSupervisorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DemoDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DemoDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDepartments" EntityType="DemoDBModel.tblDepartment" />
+          <EntitySet Name="tblEmployees" EntityType="DemoDBModel.tblEmployee" />
+          <AssociationSet Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees" Association="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+            <End Role="tblEmployees" EntitySet="tblEmployees" />
+            <End Role="tblDepartments" EntitySet="tblDepartments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEmployeesSupervixorID_ToEmployeeID" Association="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID">
+            <End Role="tblEmployees" EntitySet="tblEmployees" />
+            <End Role="tblEmployees1" EntitySet="tblEmployees" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="pkDepartmentID" />
+          </Key>
+          <Property Name="pkDepartmentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="fkDepartmentHeadID" Type="Int32" />
+          <NavigationProperty Name="tblEmployee" Relationship="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees" FromRole="tblDepartments" ToRole="tblEmployees" />
+        </EntityType>
+        <EntityType Name="tblEmployee">
+          <Key>
+            <PropertyRef Name="pkEmployeeID" />
+          </Key>
+          <Property Name="pkEmployeeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="fkSupervisorID" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="website" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblDepartments" Relationship="DemoDBModel.FK_tblDepartmentsDepartmentHeadID_ToEmployees" FromRole="tblEmployees" ToRole="tblDepartments" />
+          <NavigationProperty Name="tblEmployees1" Relationship="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID" FromRole="tblEmployees" ToRole="tblEmployees1" />
+          <NavigationProperty Name="tblEmployee1" Relationship="DemoDBModel.FK_tblEmployeesSupervixorID_ToEmployeeID" FromRole="tblEmployees1" ToRole="tblEmployees" />
+        </EntityType>
+        <Association Name="FK_tblDepartmentsDepartmentHeadID_ToEmployees">
+          <End Role="tblEmployees" Type="DemoDBModel.tblEmployee" Multiplicity="0..1" />
+          <End Role="tblDepartments" Type="DemoDBModel.tblDepartment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmployees">
+              <PropertyRef Name="pkEmployeeID" />
+            </Principal>
+            <Dependent Role="tblDepartments">
+              <PropertyRef Name="fkDepartmentHeadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEmployeesSupervixorID_ToEmployeeID">
+          <End Role="tblEmployees" Type="DemoDBModel.tblEmployee" Multiplicity="0..1" />
+          <End Role="tblEmployees1" Type="DemoDBModel.tblEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmployees">
+              <PropertyRef Name="pkEmployeeID" />
+            </Principal>
+            <Dependent Role="tblEmployees1">
+              <PropertyRef Name="fkSupervisorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DemoDBModelStoreContainer" CdmEntityContainer="DemoDBEntities">
+          <EntitySetMapping Name="tblDepartments">
+            <EntityTypeMapping TypeName="DemoDBModel.tblDepartment">
+              <MappingFragment StoreEntitySet="tblDepartments">
+                <ScalarProperty Name="pkDepartmentID" ColumnName="pkDepartmentID" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="fkDepartmentHeadID" ColumnName="fkDepartmentHeadID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEmployees">
+            <EntityTypeMapping TypeName="DemoDBModel.tblEmployee">
+              <MappingFragment StoreEntitySet="tblEmployees">
+                <ScalarProperty Name="pkEmployeeID" ColumnName="pkEmployeeID" />
+                <ScalarProperty Name="fkSupervisorID" ColumnName="fkSupervisorID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="website" ColumnName="website" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

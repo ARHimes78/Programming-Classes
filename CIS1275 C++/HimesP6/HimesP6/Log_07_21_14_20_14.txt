@@ -1,0 +1,26 @@
+(A sample of successful creation of file)
+
+Log of Roulette Play
+
+20:14:21
+07/21/14
+Game # 1
+Bet: $100.00
+Number bet on: 11
+Winning number: 11
+Winnings: $3600.00
+Total Winnings: $3600.00
+Balance: $3600.00
+***WIN!***
+
+20:14:32
+07/21/14
+Game # 2
+Bet: $3600.00
+Number bet on: 16
+Winning number: 30
+Winnings: $0.00
+Total Winnings: $3600.00
+Balance: $0.00
+
+Ran out of money!

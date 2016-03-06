@@ -1,0 +1,11 @@
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\bin\Debug\HimesP5.exe.config
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\bin\Debug\HimesP5.exe
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\bin\Debug\HimesP5.pdb
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\bin\Debug\CowboysAliens.dll
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\bin\Debug\CowboysAliens.pdb
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.csprojResolveAssemblyReference.cache
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.CowboysAliensForm.resources
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.Properties.Resources.resources
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.csproj.GenerateResource.Cache
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.exe
+\\filer2main\student1$\ahimes1\visual studio 2012\Projects\HimesP5\HimesP5\obj\Debug\HimesP5.pdb
